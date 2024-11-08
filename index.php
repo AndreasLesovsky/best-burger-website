@@ -119,7 +119,7 @@ $conn->close();
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			<?php if ($msg): ?>
-				// Scrollen zur Kommentar-Sektion
+				// Scrollen zur Reservierungs-Sektion
 				const reserveSection = document.getElementById("reserve");
 				if (reserveSection) {
 					reserveSection.scrollIntoView({
