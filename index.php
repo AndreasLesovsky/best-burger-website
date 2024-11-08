@@ -11,7 +11,7 @@ $msg = '';
 
 if (count($_POST) > 0) {
 	// Überprüfen des reCAPTCHA
-	$recaptchaSecret = '6LeY53AqAAAAAHUsGufzGsGhGk5LoRL3sxWmgHNa';
+	$recaptchaSecret = '';
 	$recaptchaResponse = $_POST['g-recaptcha-response'];
 
 	$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
@@ -62,15 +62,15 @@ if (count($_POST) > 0) {
 
 					try {
 						$mail->isSMTP();
-						$mail->Host = 'webmail.your-server.de'; // SMTP-Server
+						$mail->Host = ''; // SMTP-Server
 						$mail->SMTPAuth = true;
-						$mail->Username = 'best-burger@andreas-lesovsky-web.dev'; // SMTP-Benutzername
-						$mail->Password = 'V61Fzf6QYcx3y738'; // SMTP-Passwort
+						$mail->Username = ''; // SMTP-Benutzername
+						$mail->Password = ''; // SMTP-Passwort
 						$mail->SMTPSecure = 'tls'; // oder 'ssl'
 						$mail->Port = 587; // oder 465 für SSL
 						$mail->CharSet = 'UTF-8';
 
-						$mail->setFrom('best-burger@andreas-lesovsky-web.dev', 'Best Burger');
+						$mail->setFrom('', 'Best Burger');
 						$mail->addAddress($email);
 
 						$mail->isHTML(true);
@@ -629,7 +629,7 @@ $conn->close();
 						<input type="text" name="name" placeholder="Name" required>
 						<input type="email" name="email" placeholder="E-Mail" required>
 						<input type="tel" name="phone" placeholder="Telefon" required>
-						<div class="g-recaptcha" data-sitekey="6LeY53AqAAAAAMwrLQFe4nEke6M1Ak2V-1EVP6Ue"></div>
+						<div class="g-recaptcha" data-sitekey=""></div>
 						<input type="submit" value="Reservieren" class="btn-primary hvr-outline-out">
 					</div>
 				</form>
