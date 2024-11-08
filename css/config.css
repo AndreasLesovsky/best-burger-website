@@ -1,0 +1,38 @@
+:root {
+    /* ---- Farben ---- */
+    
+    --col-font: #1e1e1e;
+	--col-font-inverted: #e9e9e9;
+	--col-main: #ff6900;
+	--col-bg: #c3cccf;
+	--col-section: #d6dadb;
+	--col-buttons: #613b00;
+	--col-buttons-hover: #ff852d;
+	--col-shadow: rgba(0, 0, 0, 0.2);
+
+    /* ---- ENDE Farben ---- */
+
+
+    /* ---- Schriften ---- */
+    --font-std: 'Raleway', Arial, sans-serif;
+	--font-headlines: 'Play', 'Times New Roman', sans-serif;
+	--font-logo: Oswald, 'Times New Roman', sans-serif;
+
+    /* ---- ENDE Schriften ---- */
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --col-font: #e1e1e1;
+        --col-font-inverted: #333;
+        --col-main: #ff6900;
+        --col-bg: #3c3733;
+		--col-section: #292524;
+        --col-buttons: #9e4200;
+        --col-buttons-hover: #ff852d;
+        --col-shadow: rgba(255, 255, 255, 0.2);
+    }
+	section#wings {
+		background-image: url(../media/wings_fire.jpg);
+	}
+
+}

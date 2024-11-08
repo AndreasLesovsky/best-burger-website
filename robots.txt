@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://best-burger.andreas-lesovsky-web-projekte.at/sitemap.xml

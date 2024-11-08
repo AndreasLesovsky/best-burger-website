@@ -1,0 +1,11 @@
+header {
+    position: relative;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+#error-page-404 {
+    background-color: var(--col-section);
+    min-height: calc(100vh - 11.625rem);
+}

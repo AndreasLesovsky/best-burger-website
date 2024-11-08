@@ -1,0 +1,452 @@
+/* ---- Media Queries ---- */
+
+/* >80rem XL */
+@media screen and (min-width:calc(80rem + 0.1px)) {}
+
+/* >80rem XL Ende */
+
+/* max 80rem LG */
+@media screen and (max-width:80rem) {
+	section {
+		padding-inline: 3rem;
+	}
+
+	section#burgers div.inner-container>div {
+		height: 153rem;
+	}
+}
+
+/* max 80rem LG Ende */
+
+/* max 64rem MD */
+@media screen and (max-width:64rem) {
+
+	/* Header */
+	nav {
+		display: none;
+	}
+
+	ul.social {
+		display: none;
+	}
+
+	#menu-btn {
+		display: block;
+	}
+
+	.menu-visible {
+		display: block;
+		position: absolute;
+		z-index: 10;
+		left: 0;
+		top: 6rem;
+		width: 100%;
+		background-color: var(--col-section);
+	}
+
+	nav ul {
+		display: block;
+		text-align: center;
+	}
+
+	nav li {
+		padding-block: 1rem;
+		border-right: none;
+		border-left: 5px solid var(--col-section);
+		border-bottom: 1px solid var(--col-font);
+	}
+
+	nav li:hover {
+		border-left: 5px solid var(--col-main);
+
+	}
+
+	nav ul li:nth-of-type(1) {
+		padding-left: 1rem;
+	}
+
+	nav ul li:nth-of-type(1) a {
+		padding-left: 1rem;
+	}
+
+	nav ul li:nth-of-type(4) {
+		padding-right: 1rem;
+	}
+
+	nav ul li:nth-of-type(4) a {
+		padding-right: 1rem;
+	}
+
+	header.small nav li {
+		border-left: 3px solid var(--col-main);
+		border-right: none;
+		padding: 0.5rem 1rem;
+	}
+
+	header.small nav li:hover {
+		border-left: 3px solid red;
+
+	}
+
+	header.small .menu-visible {
+		top: 5rem;
+		background-color: var(--col-main);
+	}
+
+	/* Hero */
+	main section:first-of-type div.inner-container {
+		text-align: center;
+		grid-template-columns: 1fr;
+		grid-template-rows: 30rem 1fr;
+		grid-template-areas: "placeholder" "content";
+		background-image: none;
+	}
+
+	.content {
+		grid-area: content;
+		padding: 1rem 0 5rem 0;
+	}
+
+	.placeholder {
+		grid-area: placeholder;
+		background-image: url(../media/burger-bg.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	main section:first-of-type div.inner-container h2 {
+		font-size: 3rem;
+		margin: 0 0 1rem;
+	}
+
+	main section:first-of-type div.inner-container p {
+		font-size: 1.12rem;
+		text-wrap: balance;
+	}
+
+	/* Section All Stars */
+	section#all-stars div.inner-container>div {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: max-content max-content;
+	}
+
+	section#all-stars div.inner-container>div>div:last-of-type {
+		left: calc(50% + 1rem);
+	}
+
+	section#all-stars div.inner-container>div div img {
+		max-width: 100%;
+		height: auto;
+		max-height: initial;
+		width: initial;
+	}
+
+	/* Wings Section */
+	section#wings div.inner-container {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: max-content max-content;
+		grid-template-areas:
+			"wings wings wings"
+			"sauces1 sauces2 rubs";
+	}
+
+	section#wings div.inner-container:first-of-type>div:nth-of-type(1) {
+		padding-right: 1rem;
+	}
+
+	/* heatmeter */
+	div#heatmeter {
+		display: none;
+	}
+
+	/* Burgers Section */
+	section#burgers div.inner-container>div {
+		flex-wrap: nowrap;
+		height: auto;
+	}
+
+	.burger-item {
+		width: 66%;
+	}
+
+	/* Restaurant Map */
+	#restaurantMap {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(10, auto);
+		grid-template-areas:
+			"map map"
+			"date date"
+			"hour hour"
+			"minute minute"
+			"check check"
+			"name name"
+			"email email"
+			"phone phone"
+			"recaptcha recaptcha"
+			"submit submit";
+		gap: 1rem;
+		height: fit-content;
+		padding: 1rem;
+	}
+
+	#reservation-form>div#restaurantMap>div>img {
+		display: none;
+	}
+	#reservation-form>div#restaurantMap>div {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(2, auto);
+		gap: 0.75rem;
+		width: 75%;
+	}
+	.table-button {
+		font-weight: bold;
+		color: var(--col-font);
+		width: 100%;
+		border-radius: 0.25rem;
+		position: relative;
+		z-index: 150;
+		border: none;
+		cursor: pointer;
+		background-color: var(--col-bg);
+	}
+
+	#reservation-form>div#restaurantMap>div button span {
+		display: inline;
+	}
+
+	#table1 {
+		left: 0;
+		top: 0;
+	}
+
+	#table2 {
+		left: 0;
+		top: 0;
+	}
+
+	#table3 {
+		left: 0;
+		top: 0;
+	}
+
+	#table4 {
+		left: 0;
+		top: 0;
+	}
+
+	#table5 {
+		left: 0;
+		top: 0;
+	}
+
+	#table6 {
+		left: 0;
+		top: 0;
+	}
+
+	#table7 {
+		left: 0;
+		top: 0;
+	}
+
+	#table8 {
+		left: 0;
+		top: 0;
+	}
+
+
+	/* view_reservations.css */
+	table th:nth-of-type(1), table td:nth-of-type(1) {
+		display: none;
+	  }
+}
+
+/* max 64rem MD Ende */
+
+/* max 48rem SM */
+@media screen and (max-width:48rem) {
+	h2 {
+		font-size: 2.5rem;
+	}
+	
+	main section:first-of-type div.inner-container h2 {
+		font-size: 2rem;
+	}
+	/* Section All Stars */
+	section#all-stars div.inner-container>div {
+		grid-template-columns: 1fr;
+		row-gap: 0;
+		grid-template-rows: max-content max-content max-content;
+		margin-bottom: 2rem;
+	}
+
+	section#all-stars div.inner-container>div>div:last-of-type {
+		left: 0;
+	}
+
+	/* Section Über Uns */
+	section#ueber-uns div.inner-container div {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+	}
+
+	section#ueber-uns div.inner-container div picture {
+		max-width: 30rem;
+		justify-self: center;
+	}
+
+	/* Wings Section */
+	section#wings div.inner-container:first-of-type {
+		grid-template-columns: 1fr;
+		grid-template-rows: max-content max-content max-content max-content;
+		grid-template-areas:
+			"wings"
+			"sauces1"
+			"sauces2"
+			"rubs";
+	}
+
+	section#wings div.inner-container:first-of-type>div:nth-of-type(3) {
+		padding-top: 0;
+	}
+
+	/* Burgers Section */
+	section#burgers div.inner-container>div {
+		flex-wrap: nowrap;
+		height: auto;
+	}
+
+	.burger-item {
+		width: initial;
+	}
+
+	/* Anfahrt Section */
+	section#locate>div>div {
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	section#locate>div>div>iframe {
+		max-width: 12.5rem;
+		max-height: 12.5rem;
+	}
+
+	section#locate>div>div>p {
+		font-size: 1.25rem;
+	}
+
+	/* Soups Salads Section */
+	section#soups-salads div.inner-container>div {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+		gap: 1rem;
+	}
+
+	/* Desserts Section*/
+	section#desserts div.inner-container>div {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		padding: 1rem;
+	}
+
+}
+
+/* max 48rem SM Ende*/
+
+/* max 36rem XS */
+@media screen and (max-width:36rem) {
+	h2 {
+		font-size: 2rem;
+	}
+	section {
+		padding-inline: 1.5rem;
+	}
+	
+	/* Section Hero */
+	.placeholder {
+		background-image: url(../media/burger-bg.png);
+		background-size: 125%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	main section:first-of-type div.inner-container {
+		text-align: center;
+		grid-template-columns: 1fr;
+		grid-template-rows: 17rem 1fr;
+		grid-template-areas: "placeholder" "content";
+		background-image: none;
+	}
+	/* Footer */
+	section#footer>ul li {
+		padding: 0 0.5rem;
+	}
+
+	section#footer>ul a {
+		padding: 0 0rem;
+	}
+
+	/* Restaurant Map */
+	#reservation-form>div#restaurantMap>div {
+		width: 100%;
+	}
+	#reservation-form>div#restaurantMap>input {
+		width: 100%;
+	}
+	
+	#reservation-form>div#restaurantMap>select[name="resHour"] {
+		width: 100%;
+	}
+	
+	#reservation-form>div#restaurantMap>select[name="resMinute"] {
+		width: 100%;
+	}
+	
+	#reservation-form>div#restaurantMap>button[id="checkAvailabilityBtn"] {
+		width: 100%;
+	}
+}
+
+/* Mobile max 36rem XS Ende */
+
+/* max 25rem XXS */
+@media screen and (max-width:25rem) {
+	main section:first-of-type div.inner-container h2 {
+		font-size: 1.85rem;
+	}
+	main section:first-of-type {
+		padding-inline: 0.5rem;
+	}
+	.content {
+		padding-inline: 1rem;
+	}
+	.placeholder {
+		background-image: url(../media/burger-bg.png);
+		background-size: 155%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	section {
+		padding-inline: 1rem;
+	}
+	#reservation-form>div#restaurantMap>div {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4, auto);
+		width: 100%;
+	}
+}
+
+/* max 25rem XXS Ende */
+
+/* Mozilla Firefox */
+@-moz-document url-prefix() {}
+
+/* Google Chrome und andere Webkit-basierte Browser */
+@media screen and (-webkit-min-device-pixel-ratio:0) {}
+
+/* ---- Media Queries Ende ---- */

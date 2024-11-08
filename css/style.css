@@ -1,0 +1,934 @@
+/* ---- Allgemein ---- */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-std);
+	font-size: 1.1rem;
+	letter-spacing: 0.05rem;
+	line-height: 1.5;
+	color: var(--col-font);
+	background-color: var(--col-bg);
+}
+
+section {
+	padding-block: 3rem;
+}
+
+.inner-container {
+	max-width: 80rem;
+	margin: auto;
+}
+
+h2 {
+	font-family: var(--font-headlines);
+	color: var(--col-main);
+	line-height: 1.2;
+	text-transform: uppercase;
+	margin: 1rem;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+#ueber-uns,
+#burgers,
+#wings,
+#reserve {
+	scroll-margin-top: 1rem;
+}
+
+/* ---- ENDE Allgemein ---- */
+
+/* ---- Header ---- */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--col-bg);
+	padding-inline: 2rem;
+	width: 100%;
+	height: 6rem;
+	position: absolute;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	transition: transform 0.3s ease;
+}
+
+header.small {
+	height: 5rem;
+	background-color: var(--col-main);
+	position: fixed;
+	z-index: 999;
+}
+
+header.small nav a {
+	color: var(--col-font-inverted);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header.small nav a:hover {
+	color: var(--col-font);
+}
+
+header.small nav li {
+	border-right: 2px solid red;
+}
+
+header.small nav li:last-of-type {
+	border-right: none;
+}
+
+header.small ul.social a {
+	font-size: 1.75rem;
+	padding: 0.5rem;
+	color: var(--col-font-inverted);
+}
+
+header.small ul.social a:hover {
+	color: var(--col-font);
+}
+
+header.small #menu-btn svg {
+	fill: var(--col-font-inverted);
+}
+
+header.small #menu-btn:hover svg {
+	fill: var(--col-font);
+}
+
+header.small a.logo {
+	color: var(--col-font-inverted);
+}
+
+a.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: var(--col-main);
+	text-wrap: nowrap;
+}
+
+a.logo h1 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+a.logo small {
+	font-size: 0.75rem;
+	font-weight: normal;
+	transform: translateY(-0.25rem);
+}
+
+nav ul {
+	text-wrap: nowrap;
+	display: flex;
+}
+
+nav li {
+	border-right: 2px solid var(--col-main);
+	padding: 0 1rem;
+}
+
+nav li:last-of-type {
+	border-right: none;
+}
+
+nav a {
+	font-size: 1.15rem;
+	font-weight: bold;
+	padding: 0.5rem 1rem;
+	color: var(--col-font);
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: color ease .5s;
+}
+
+nav a:hover {
+	color: var(--col-main);
+}
+
+nav ul li:nth-of-type(1) {
+	padding-left: 0;
+}
+
+nav ul li:nth-of-type(1) a {
+	padding-left: 0;
+}
+
+nav ul li:nth-of-type(4) {
+	padding-right: 0;
+}
+
+nav ul li:nth-of-type(4) a {
+	padding-right: 0;
+}
+
+ul.social {
+	display: flex;
+	gap: 0.5rem;
+}
+
+ul.social a {
+	font-size: 1.75rem;
+	padding: 0.5rem;
+	color: var(--col-font);
+}
+
+ul.social a:hover {
+	color: var(--col-main);
+}
+
+#menu-btn {
+	display: none;
+	background: none;
+	border: none;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+}
+
+#menu-btn svg {
+	width: 2rem;
+	height: 2rem;
+	fill: var(--col-font);
+	transition: fill ease .5s;
+}
+
+#menu-btn:hover svg {
+	fill: var(--col-main);
+}
+
+/* ---- ENDE Header ---- */
+
+/* ---- Hero Section ---- */
+main section:first-of-type {
+	background-color: var(--col-section);
+	padding-top: 6rem;
+	padding-bottom: 0;
+}
+
+main section:first-of-type div.inner-container {
+	text-wrap: balance;
+	display: grid;
+	grid-template-columns: 40% 1fr;
+	grid-template-rows: max-content;
+	background-image: url(../media/burger-bg.png);
+	background-size: auto 30rem;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+main section:first-of-type div.inner-container h2 {
+	font-size: 2.75rem;
+	margin: 0;
+}
+
+main section:first-of-type div.inner-container p {
+	font-size: 1.12rem;
+	font-weight: bold;
+	margin-block: 1rem;
+
+}
+
+main section:first-of-type>div.inner-container>div.content>.link-btn {
+	top: 1rem;
+}
+
+.content {
+	padding: 1rem 0 3rem 2rem;
+}
+
+div.sticky-header-bar {
+	position: sticky;
+	left: 0;
+	top: 0;
+	z-index: 400;
+	height: 8px;
+	background-color: var(--col-main);
+}
+
+/* ---- ENDE Hero Section ---- */
+
+/* Section Über Uns */
+section#ueber-uns div.inner-container div {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: max-content;
+}
+
+section#ueber-uns div.inner-container div p {
+	padding: 1rem;
+}
+
+section#ueber-uns div.inner-container div picture {
+	max-width: 25rem;
+	justify-self: end;
+	align-self: center;
+	padding: 1rem;
+}
+
+section#ueber-uns {
+	background-color: var(--col-section);
+	border-top: 1px solid var(--col-font);
+	border-bottom: 1px solid var(--col-font);
+}
+
+/* ENDE Section Über Uns */
+
+/* Section All Stars */
+section#all-stars div.inner-container>div {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: max-content;
+	gap: 2rem;
+	row-gap: 0;
+}
+
+section#all-stars div.inner-container>div div {
+	text-align: start;
+	padding: 1rem;
+}
+
+section#all-stars div.inner-container>div div>* {
+	margin-block: 0.5rem;
+}
+
+section#all-stars div.inner-container>div div h4 {
+	font-size: 2rem;
+	grid-area: burger-title;
+}
+section#all-stars div.inner-container>div div p {
+	grid-area: burger-desc;
+}
+
+section#all-stars div.inner-container>div div img {
+	border-bottom: 5px solid var(--col-section);
+}
+
+section#all-stars div.inner-container {
+	text-align: center;
+}
+
+section#all-stars div.inner-container div div.burger-card img {
+	grid-area: burger-img;
+}
+
+section#all-stars div.inner-container h2 {
+	text-align: start;
+}
+.burger-card {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+		"burger-img"
+		"burger-title"
+		"burger-desc";
+	justify-content: center;
+	align-items: start;
+}
+/* ---- ENDE All Stars Section ---- */
+
+/* ---- Wings Section ---- */
+section:nth-of-type(5) {
+	background-image: url(../media/wings_fire_inverted.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: var(--col-section);
+	border-top: 1px solid var(--col-font);
+	border-bottom: 1px solid var(--col-font);
+}
+
+section#wings div.inner-container:first-of-type {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: max-content;
+	grid-template-areas:
+		"wings wings sauces1 sauces2 rubs";
+}
+
+section#wings div.inner-container:first-of-type>div:nth-of-type(2),
+section#wings div.inner-container:first-of-type>div:nth-of-type(3),
+section#wings div.inner-container:first-of-type>div:nth-of-type(4) {
+	padding: 1rem;
+}
+
+section#wings div.inner-container:first-of-type>div:nth-of-type(2),
+section#wings div.inner-container:first-of-type>div:nth-of-type(4) {
+	padding-top: 1.5rem;
+}
+
+section#wings div.inner-container:first-of-type ul {
+	padding-top: 1.75rem;
+}
+
+section#wings div.inner-container:first-of-type ul li:hover {
+	cursor: pointer;
+	color: var(--col-main);
+}
+
+section#wings div.inner-container:first-of-type>div:nth-of-type(1) {
+	grid-area: wings;
+	padding-right: 10rem;
+}
+
+section#wings div.inner-container:first-of-type>div:nth-of-type(2) {
+	grid-area: sauces1;
+}
+
+section#wings div.inner-container:first-of-type>div:nth-of-type(3) {
+	grid-area: sauces2;
+	padding-top: 4.5rem;
+}
+
+section#wings div.inner-container:first-of-type>div:nth-of-type(4) {
+	grid-area: rubs;
+}
+
+section#wings div.inner-container:first-of-type>div:nth-of-type(1) p {
+	margin: 1rem;
+}
+
+section#wings div.inner-container:first-of-type h3 {
+	font-size: 2rem;
+}
+
+/* ---- ENDE Wings Section ---- */
+
+/* ---- Heatmeter ---- */
+#heatmeter-holder {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: start;
+	gap: 0.25rem;
+}
+
+div#heatmeter {
+	padding: 1rem;
+	line-height: initial;
+	letter-spacing: initial;
+}
+
+div#heatmeter h2 {
+	margin-inline: 0;
+}
+
+div#heatmeter h2 span {
+	font-size: 1.25rem;
+	color: var(--col-font);
+	font-family: var(--font-std);
+	font-weight: normal;
+	text-transform: initial;
+}
+
+.slide {
+	flex: 1 1 auto;
+	height: 15rem;
+	cursor: pointer;
+}
+
+.slide p {
+	display: none;
+	color: #333;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.slide span {
+	display: none;
+	color: #333;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.slide.open {
+	width: 30rem;
+}
+
+.slide.open p {
+	display: block;
+	padding: 1rem;
+}
+
+.slide.open span {
+	display: block;
+	padding: 1rem;
+	padding-top: 0;
+}
+
+.slide:nth-of-type(1) {
+	background-color: #FF0000;
+}
+
+.slide:nth-of-type(2) {
+	background-color: #FF0D00;
+}
+
+.slide:nth-of-type(3) {
+	background-color: #FF1A00;
+}
+
+.slide:nth-of-type(4) {
+	background-color: #FF2700;
+}
+
+.slide:nth-of-type(5) {
+	background-color: #FF3400;
+}
+
+.slide:nth-of-type(6) {
+	background-color: #FF4100;
+}
+
+.slide:nth-of-type(7) {
+	background-color: #FF4E00;
+}
+
+.slide:nth-of-type(8) {
+	background-color: #FF5B00;
+}
+
+.slide:nth-of-type(9) {
+	background-color: #FF6800;
+}
+
+.slide:nth-of-type(10) {
+	background-color: #FF7500;
+}
+
+.slide:nth-of-type(11) {
+	background-color: #FF8200;
+}
+
+.slide:nth-of-type(12) {
+	background-color: #FF8F00;
+}
+
+.slide:nth-of-type(13) {
+	background-color: #FF9C00;
+}
+
+.slide:nth-of-type(14) {
+	background-color: #FFA900;
+}
+
+.slide:nth-of-type(15) {
+	background-color: #FFB600;
+}
+
+.slide:nth-of-type(16) {
+	background-color: #FFC300;
+}
+
+.slide:nth-of-type(17) {
+	background-color: #FFD000;
+}
+
+.slide:nth-of-type(18) {
+	background-color: #FFDD00;
+}
+
+.slide:nth-of-type(19) {
+	background-color: #FFEA00;
+}
+
+.slide:nth-of-type(20) {
+	background-color: #FFF700;
+}
+
+.slide:nth-of-type(21) {
+	background-color: #FFFF00;
+}
+
+.slide:nth-of-type(22) {
+	background-color: #F7FF00;
+}
+
+.slide:nth-of-type(23) {
+	background-color: #EAFF00;
+}
+
+.slide:nth-of-type(24) {
+	background-color: #DDFF00;
+}
+
+.slide:nth-of-type(25) {
+	background-color: #D0FF00;
+}
+
+.slide:nth-of-type(26) {
+	background-color: #C3FF00;
+}
+
+.slide:nth-of-type(27) {
+	background-color: #B6FF00;
+}
+
+.slide:nth-of-type(28) {
+	background-color: #A9FF00;
+}
+
+.slide:nth-of-type(29) {
+	background-color: #9CFF00;
+}
+
+.slide:nth-of-type(30) {
+	background-color: #8FFF00;
+}
+
+.slide:nth-of-type(31) {
+	background-color: #82FF00;
+}
+
+.slide:nth-of-type(32) {
+	background-color: #75FF00;
+}
+
+.slide:nth-of-type(33) {
+	background-color: #68FF00;
+}
+
+.slide:nth-of-type(34) {
+	background-color: #5BFF00;
+}
+
+.slide:nth-of-type(35) {
+	background-color: #4EFF00;
+}
+
+/* ---- ENDE Heatmeter ---- */
+
+/* ---- Burgers Section ---- */
+section#burgers div.inner-container>div {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	height: 152.5rem;
+	justify-items: start;
+	padding-inline: 1rem;
+}
+
+.burger-item {
+	width: 30%;
+}
+
+.burger-item h4 {
+	font-size: 1.4rem;
+	color: var(--col-main);
+	margin-top: 1rem;
+}
+
+/* ---- ENDE Burgers Section ---- */
+
+/* ---- Soups Salads Section ---- */
+section#soups-salads div.inner-container>div {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	gap: 4rem;
+}
+
+section#soups-salads div.inner-container>div>div h3 {
+	font-size: 1.85rem;
+	border-bottom: 2px solid var(--col-main);
+	padding-block: 1rem;
+}
+
+section#soups-salads div.inner-container>div>div {
+	padding: 1rem;
+}
+
+section#soups-salads div.inner-container>div>div>div h4 {
+	font-size: 1.4rem;
+	color: var(--col-main);
+	margin-top: 1rem;
+}
+
+/* ---- ENDE Soups Salads Section ---- */
+
+/* ---- Sides Desserts Section ---- */
+section#desserts div.inner-container>div {
+	display: flex;
+	gap: 10rem;
+	padding: 1rem;
+}
+
+section#desserts div.inner-container>div>div h4 {
+	font-size: 1.4rem;
+	color: var(--col-main);
+	margin-top: 1rem;
+}
+
+section#soups-salads {
+	background-color: var(--col-section);
+	border-top: 1px solid var(--col-font);
+	border-bottom: 1px solid var(--col-font);
+}
+
+section#sides div.inner-container>div {
+	display: flex;
+	gap: 10rem;
+	padding: 1rem;
+}
+
+section#sides div.inner-container div ul li {
+	margin-block: 0.5rem;
+}
+
+/* ---- ENDE Sides Desserts Section ---- */
+
+/* ---- Reservierung Section ---- */
+section#reserve div.inner-container>p {
+	padding: 1rem;
+}
+
+#openMapBtn {
+	margin: 1rem;
+}
+
+section#reserve div.inner-container>p {
+	padding: 1rem;
+}
+
+section#reserve {
+	background-color: var(--col-section);
+	border-top: 1px solid var(--col-font);
+	border-bottom: 1px solid var(--col-font);
+}
+
+/* ---- ENDE Reservierung Section ---- */
+
+/* ---- Anfahrt Kontakt Section ---- */
+section#locate>div>div>p {
+	font-size: 1.25rem;
+	padding: 1rem;
+}
+
+section#locate>div>div>iframe {
+	max-width: 20rem;
+	max-height: 12rem;
+	margin: 1rem;
+}
+
+section#locate>div>div {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/* ---- ENDE Anfahrt Kontakt Section ---- */
+
+/* ---- Footer ---- */
+#footer {
+	background-color: var(--col-section);
+	border-top: 1px solid var(--col-font);
+}
+
+#footer>div.inner-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-inline: 1rem;
+}
+
+#footer>div.inner-container>ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#footer>div.inner-container>ul li {
+	border-right: 2px solid var(--col-main);
+	margin-block: 1rem;
+}
+
+#footer>div.inner-container>ul li:last-of-type {
+	border-right: none;
+}
+#footer>div.inner-container>ul:last-of-type li {
+	border-right: none;
+}
+
+#footer>div.inner-container>ul:first-of-type a {
+	color: var(--col-font);
+	text-transform: uppercase;
+	padding: 0 1rem;
+	transition: color ease 0.5s;
+}
+
+#footer>div.inner-container>ul a:hover {
+	color: var(--col-main);
+}
+
+address {
+	font-style: normal;
+	font-weight: bold;
+	color: var(--col-font);
+	padding-inline: 1rem;
+}
+
+/* ---- ENDE Footer ---- */
+
+/* ---- Restaurant Map ---- */
+
+#restaurantMap {
+	display: grid;
+	grid-template-columns: 304px 28.75rem 1fr;
+	grid-template-rows: repeat(9, auto);
+	row-gap: 0.75rem;
+	grid-template-areas:
+		"date map ."
+		"hour map ."
+		"minute map ."
+		"check map ."
+		"name map ."
+		"email map ."
+		"phone map ."
+		"recaptcha map ."
+		"submit map .";
+	justify-items: start;
+	align-items: center;
+	height: fit-content;
+	background: var(--col-section);
+	padding: 1rem;
+}
+#reservation-form>div#restaurantMap>.g-recaptcha {
+	grid-area: recaptcha;
+}
+#reservation-form>div#restaurantMap>div {
+	grid-area: map;
+	display: block;
+}
+
+#reservation-form>div#restaurantMap>div>img {
+	width: 460px;
+	height:372px;
+}
+
+#reservation-form>div#restaurantMap>div button span {
+	display: none;
+}
+
+#reservation-form>div#restaurantMap>input[name="name"] {
+	grid-area: name;
+}
+
+#reservation-form>div#restaurantMap>input[type="email"] {
+	grid-area: email;
+}
+
+#reservation-form>div#restaurantMap>input[type="tel"] {
+	grid-area: phone;
+}
+
+#reservation-form>div#restaurantMap>input[id="resTag"] {
+	grid-area: date;
+}
+
+#reservation-form>div#restaurantMap>select[name="resHour"] {
+	grid-area: hour;
+}
+
+#reservation-form>div#restaurantMap>select[name="resMinute"] {
+	grid-area: minute;
+}
+
+#reservation-form>div#restaurantMap>button[id="checkAvailabilityBtn"] {
+	grid-area: check;
+}
+
+#reservation-form>div#restaurantMap>input[type="submit"] {
+	grid-area: submit;
+	border: none;
+	cursor: pointer;
+	width: initial;
+}
+
+
+input,
+select {
+	padding: 0.5rem 0.75rem;
+	caret-color: var(--col-font);
+	border: 0.5px solid var(--col-main);
+	border-radius: 0.25rem;
+	background-color: var(--col-bg);
+	color: var(--col-font);
+	width: 100%;
+}
+
+
+.table-button {
+	font-weight: bold;
+	color: #333;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 100vw;
+	position: absolute;
+	z-index: 150;
+	border: none;
+	cursor: pointer;
+	background-color: #eee;
+}
+
+.table-button.red {
+	background-color: #FF2700;
+	cursor: initial;
+}
+
+.table-button.green {
+	color: #333;
+	background-color: #4EFF00;
+}
+
+.table-button.selected {
+	outline: 3px solid var(--col-main);
+	outline-offset: 1px;
+}
+
+#table1 {
+	left: 5.85rem;
+	top: 12.90rem;
+}
+
+#table2 {
+	left: 11.25rem;
+	top: 11.95rem;
+}
+
+#table3 {
+	left: 14.25rem;
+	top: 11.4rem;
+}
+
+#table4 {
+	left: 18.95rem;
+	top: 10.65rem;
+}
+
+#table5 {
+	left: 6.4rem;
+	top: 18.35rem;
+}
+
+#table6 {
+	left: 11.9rem;
+	top: 17.3rem;
+}
+
+#table7 {
+	left: 14.65rem;
+	top: 16.8rem;
+}
+
+#table8 {
+	left: 20.1rem;
+	top: 15.7rem;
+}
+
+/* ---- ENDE Restaurant Map ---- */

@@ -1,0 +1,110 @@
+/* Allgemeine Stile */
+#reservations div.inner-container {
+	display: block;
+	background-image: none;
+}
+
+#reservations div.inner-container h2 {
+	margin-block: 1rem;
+	border-radius: 0.5rem;
+}
+
+main form {
+	margin-top: 2rem;
+}
+
+/* Tabellen-Stile */
+th, td {
+	padding: 0.5rem;
+	border-right: 2px solid var(--col-main);
+}
+
+tr {
+	border-bottom: 2px solid var(--col-main);
+}
+/* thead tr:first-of-type {
+	background-color: var(--col-bg);
+} */
+thead tr:nth-of-type(2) {
+	background-color: var(--col-main);
+}
+
+thead tr:nth-of-type(2) td {
+	padding-block: 0.25rem;
+}
+
+tbody tr:last-of-type {
+	border-bottom: none;
+}
+
+td:last-of-type, th:last-of-type {
+	border-right: none;
+}
+
+/* Button-Stile */
+button[type="submit"] {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+button[type="submit"]:focus {
+	outline: 3px solid var(--col-font);
+}
+
+.btn-change-page {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	padding: .25rem;
+	border-radius: 0.25rem;
+	background-color: var(--col-font-inverted);
+	top: 0.4rem;
+}
+
+.btn-change-page svg {
+	fill: var(--col-font);
+}
+
+.btn-change-page:first-of-type svg {
+	left: 0.25rem;
+}
+
+.btn-change-page:focus {
+	outline: 3px solid var(--col-font);
+}
+
+/* Pagination */
+.pagination {
+	margin-block: 2rem;
+}
+
+/* Input-Felder */
+input[readonly] {
+	color: var(--col-font);
+	font-family: var(--font-std);
+	font-size: inherit;
+	border: none;
+	background: none;
+	max-width: 2ch;
+	min-width: 0px;
+}
+
+thead tr:nth-of-type(2) td input {
+	color: var(--col-font);
+	background-color: var(--col-bg);
+	border: 2px solid var(--col-font);
+	outline: none;
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+	width: 100%;
+}
+
+thead tr:nth-of-type(2) td input:focus {
+	outline: 3px solid var(--col-font);
+}
+
+/* Zusatz */
+button[name="btnOrderDate"] svg {
+	position: relative;
+}
