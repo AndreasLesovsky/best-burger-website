@@ -2,12 +2,9 @@
 define("TESTMODUS",false); //Konstante; gibt an, ob wir uns in einem Development-System (TESTMODUS ist true) oder in einem Produktivsystem (TESTMODUS ist false) befinden
 
 define("DB",[
-	"host" => "sql136.your-server.de",
-	"user" => "andreac_211",
-	"pwd" => "uQFUwK4a5aNKfF3B",
-	// "host" => "localhost",
-	// "user" => "root",
-	// "pwd" => "",
+	"host" => "localhost",
+	"user" => "root",
+	"pwd" => "",
 	"name" => "db_reservations",
 	"charset" => "utf8mb4",
 	"errorpages" => [
